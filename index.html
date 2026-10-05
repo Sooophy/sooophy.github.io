@@ -485,6 +485,20 @@
             flex-grow: 1;
         }
 
+        .experience-highlights {
+            padding-left: 1.25rem;
+        }
+
+        .experience-highlights li + li {
+            margin-top: var(--space-1);
+        }
+
+        .project-date {
+            color: var(--text-light);
+            font-size: var(--fs-sm);
+            margin-bottom: var(--space-2);
+        }
+
         .project-links {
             display: flex;
             gap: var(--space-2);
@@ -957,8 +971,8 @@
             <div class="hero-text">
                 <h1>Hi, I'm <span class="typewriter">Sophie Shi</span></h1>
                 <p class="subtitle">Focus on Machine Learning • Expected Graduation 2027</p>
-                <p>I'm a PhD Candidate from Duke University in <a href="https://www.tdunnlab.org/" target="_blank">Tim Dunn Lab</a>. My research focuses are <b>human behavior analysis</b>, which involves <b>computer vision, 3D pose estimation</b> and <b>NLP</b>.</p>
-                <p>I'm actively looking for internship in 2026 summer, including machine learning engineer and research scientist in related field. I am also interested in software engineer roles as I am also pursuing a concurrent master degree in ECE.</p>
+                <p>I am a Ph.D. candidate at Duke University in the <a href="https://www.tdunnlab.org/" target="_blank" rel="noopener noreferrer">Tim Dunn Lab</a>, working on deep learning and machine learning. I specialize in AI/ML, <strong>computer vision, 3D pose estimation, and video-based motion analysis</strong>.</p>
+                <p>I am seeking an internship for <strong>summer/fall 2027</strong>, and full-time roles starting in January 2028.</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
@@ -994,14 +1008,31 @@
         <div class="publications-container">
             <article class="publication-card fade-in">
                 <div class="publication-figure">
-                    <img src="images/HRI_logo.gif" alt="Honda Research Institute logo">
+                    <img src="images/dannce_logo.jpeg" alt="DANNCE.ai logo" width="200" height="200">
+                </div>
+                <div>
+                    <h3 class="publication-title">PhD Machine Learning Engineer Intern, DANNCE.ai</h3>
+                    <p class="publication-authors">Boston, MA • May 2026 – Aug. 2026</p>
+                    <ul class="publication-description experience-highlights">
+                        <li>Developed human motion analysis algorithms for a mobile clinical decision support application.</li>
+                        <li>Implemented 3D motion features from <strong>monocular mobile videos</strong>, improving cadence accuracy by over <strong>10x</strong> compared with the original 2D pipeline. <strong>Production deployment</strong> planned soon.</li>
+                        <li>Managed and processed patient data in Google Cloud and supported patient-facing data workflows.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="publication-card fade-in">
+                <div class="publication-figure">
+                    <img src="images/honda_logo.jpeg" alt="Honda Research Institute logo" width="200" height="200">
                 </div>
                 <div>
                     <h3 class="publication-title">PhD Applied Research Intern, Honda Research Institute</h3>
                     <p class="publication-authors">San Jose, CA • Jan. 2026 – Apr. 2026</p>
-                    <p class="publication-description">
-                        Designing a video representation learning framework for long videos via a self-supervised learning (SSL) pipeline.
-                    </p>
+                    <ul class="publication-description experience-highlights">
+                        <li>Designed a <strong>self-supervised</strong> video representation learning framework based on <strong>contrastive learning</strong> for long videos.</li>
+                        <li>Developed motion-aware training objectives using <strong>optical flow</strong> and pairwise motion similarity.</li>
+                        <li>Integrated a <strong>knowledge distillation</strong> module into the pipeline to improve efficiency.</li>
+                    </ul>
                 </div>
             </article>
         </div>
@@ -1031,13 +1062,16 @@
         <div class="projects-grid">
             <div class="project-card fade-in">
                 <div class="project-header">
-                    <h3 class="project-title">A Multimodal System for Epilepsy Semiology Detection and Surgical Assistance</h3>
-                    <p class="project-tech">Computer Vision • 3D Pose Estimation • LLM Integration • Video Processing</p>
+                    <h3 class="project-title">A Video Pipeline for Automated Behavior Detection</h3>
+                    <p class="project-tech">Multimodal Learning • Vision Language Models • Pose Estimation • Video Processing</p>
                 </div>
                 <div class="project-body">
-                    <p class="project-description">
-                        Developing computer vision-based pipeline using pose estimation models for automated semiology detection in clinical video data. Building a multi-modal system that integrates pose estimation, imaging processing and large language model to predict surgery outcome.
-                    </p>
+                    <p class="project-date">Nov. 2024 – Present</p>
+                    <ul class="project-description experience-highlights">
+                        <li>Building a multimodal system that integrates video, images, and brain signals.</li>
+                        <li>Developing a vision language model (VLM) pipeline for automated behavior detection in clinical video data.</li>
+                        <li>Performed supervised fine-tuning (SFT) using Sapiens (Meta) and MMPose (OpenMMLab).</li>
+                    </ul>
                     <div class="project-links">
                         <a href="#" class="project-link link-github">Details to come</a>
                     </div>
@@ -1050,9 +1084,10 @@
                     <p class="project-tech">LLM • RAG • Prompt Engineering</p>
                 </div>
                 <div class="project-body">
-                    <p class="project-description">
-                        Built an LLM tool using Qwen-3 to extract insights from arXiv papers via single paper summarization or multi-document RAG-augmented summarization. Integrated semantic chunking, BAAI/bge-small-en embeddings, FAISS search, and structured prompts for targeted summarization.
-                    </p>
+                    <ul class="project-description experience-highlights">
+                        <li>Built an LLM tool using Qwen-3 to extract insights from arXiv papers via single paper summarization or multi-document RAG-augmented summarization.</li>
+                        <li>Integrated semantic chunking, BAAI/bge-small-en embeddings, FAISS search, and structured prompts for targeted summarization.</li>
+                    </ul>
                     <div class="project-links">
                         <a href="https://github.com/Sooophy/arxiv_insight" class="project-link link-github">Code</a>
                     </div>
@@ -1065,12 +1100,28 @@
                     <p class="project-tech">Computer Vision • 3D Pose Estimation • Computational Ethology</p>
                 </div>
                 <div class="project-body">
-                    <p class="project-description">
-                        Applied 3-Dimensional Aligned Neural Network for Computational Ethology (DANNCE) to quantify behavioral deficits in stroke models. Trained deep learning models achieving automated skeleton detection and stroke/healthy classification with kinematic feature analysis.
-                    </p>
+                    <p class="project-date">Oct. 2021 – Aug. 2024</p>
+                    <ul class="project-description experience-highlights">
+                        <li>Implemented a multi-camera algorithm to extract 3D pose landmarks of freely moving mice.</li>
+                        <li>Developed an automated pipeline for quantitative behavior profiling beyond subjective manual assessments.</li>
+                    </ul>
                     <div class="project-links">
                         <a href="https://github.com/Sooophy/dannce" class="project-link link-github">Code</a>
                     </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <h3 class="project-title">Quantifiable and Explainable Movement Analysis of Parkinson’s Disease</h3>
+                    <p class="project-tech">Motion Capture • Hand Tracking • Gait Analysis</p>
+                </div>
+                <div class="project-body">
+                    <p class="project-date">Mar. 2023 – Dec. 2023</p>
+                    <ul class="project-description experience-highlights">
+                        <li>Set up a multi-camera motion capture system for specific diagnostic tasks and daily activity recording.</li>
+                        <li>Performed hand tracking analysis (finger tapping) and gait analysis for Parkinson’s disease behavior phenotyping.</li>
+                    </ul>
                 </div>
             </div>
 
@@ -1126,21 +1177,33 @@
         <h2 class="section-title">Selected Publications</h2>
         <div class="publications-container">
             <div class="publication-group">
+                <h3 class="publication-group-title">Publications &amp; Conferences</h3>
                 <article class="publication-card fade-in">
-                    <div class="publication-figure">
-                        <img src="images/map_cluvena.jpg" alt="Angiogenic therapy figure">
+                    <div class="publication-figure">SfN 2026</div>
+                    <div>
+                        <h3 class="publication-title">Automated Quantitative Phenotyping of Seizure Semiology Using 3D Poses Reconstructed from Routine Epilepsy Monitoring Unit Single-camera Videos</h3>
+                        <p class="publication-authors"><strong>Shi Y</strong>, Agashe S, Dunn T.W.</p>
+                        <ul class="publication-description experience-highlights">
+                            <li>Oral presentation (5% of all accepted submissions).</li>
+                            <li>Trainee Professional Development Award recipient.</li>
+                        </ul>
+                        <div class="publication-meta">
+                            <span class="publication-venue">SfN Neuroscience 2026</span>
+                            <span class="publication-status published">Oral Presentation • 2026</span>
+                        </div>
                     </div>
+                </article>
+
+                <article class="publication-card fade-in">
+                    <div class="publication-figure">npj PD</div>
                     <div>
                         <h3 class="publication-title">
-                            <a href="https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adfm.202500696">Delivery of Angiogenic Therapy from Flowable Hyaluronic Acid Porous Scaffolds Results in Functional Improvement without Anti-Inflammatory Agents</a>
+                            <a href="https://www.nature.com/articles/s41531-026-01512-7">Explainable 3D multi-scale movement quantification automates motor assessments and estimates Parkinson’s disease duration</a>
                         </h3>
-                        <p class="publication-authors">Erning K, Wilson KL, et al., <strong>Shi Y</strong>, et al.</p>
-                        <p class="publication-description">
-                            Co-authored research on angiogenic therapy applications using hyaluronic acid scaffolds for tissue engineering applications. Contributed to the treatment effect evaluation.
-                        </p>
+                        <p class="publication-authors">Kim K, Wen Y, Lim L, Lyu S, <strong>Shi Y</strong>, Mitchell KT, Dunn TW</p>
                         <div class="publication-meta">
-                            <span class="publication-venue">Advanced Functional Materials</span>
-                            <span class="publication-status published">Published • 2025</span>
+                            <span class="publication-venue">npj Parkinson’s Disease</span>
+                            <span class="publication-status published">Published • 2026</span>
                         </div>
                     </div>
                 </article>
@@ -1159,40 +1222,52 @@
                             Novel compression-classification network architecture for epilepsy seizure prediction using EEG data with adaptive reconstruction modules.
                         </p>
                         <div class="publication-meta">
-                            <span class="publication-venue">IEEE TNSRE</span>
+                            <span class="publication-venue">IEEE Transactions on Neural Systems and Rehabilitation Engineering</span>
                             <span class="publication-status published">Published • 2023</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publication-card fade-in">
+                    <div class="publication-figure">
+                        <img src="images/map_cluvena.jpg" alt="Angiogenic therapy figure">
+                    </div>
+                    <div>
+                        <h3 class="publication-title">
+                            <a href="https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adfm.202500696">Delivery of Angiogenic Therapy from Flowable Hyaluronic Acid Porous Scaffolds Results in Functional Improvement without Anti-Inflammatory Agents</a>
+                        </h3>
+                        <p class="publication-authors">Erning K, Wilson KL, et al., <strong>Shi Y</strong>, et al.</p>
+                        <p class="publication-description">
+                            Co-authored research on angiogenic therapy applications using hyaluronic acid scaffolds for tissue engineering applications. Contributed to the treatment effect evaluation.
+                        </p>
+                        <div class="publication-meta">
+                            <span class="publication-venue">Advanced Functional Materials</span>
+                            <span class="publication-status published">Published • 2025</span>
                         </div>
                     </div>
                 </article>
             </div>
 
             <div class="publication-group">
+                <h3 class="publication-group-title">Manuscripts in Preparation</h3>
                 <article class="publication-card fade-in">
                     <div class="publication-figure">In Prep</div>
                     <div>
-                        <h3 class="publication-title">Motor dysfunction landscapes for deeper preclinical stroke phenotyping and enhanced therapeutic screens</h3>
-                        <p class="publication-authors"><strong>Shi Y*</strong>, Lyu S*, Erning K, et al.</p>
-                        <p class="publication-description">
-                            Advanced behavioral profiling methodology using 3D neural networks for computational ethology in stroke research models.
-                        </p>
+                        <h3 class="publication-title">Three-Dimensional Kinematic Phenotyping of Ictal Motor Semiology in Temporal Lobe Epilepsy</h3>
+                        <p class="publication-authors"><strong>Shi Y</strong>, Harward S, Southwell D, Grant G, Dunn T*, Agashe S*</p>
                         <div class="publication-meta">
-                            <span class="publication-venue">In Preparation</span>
                             <span class="publication-status in-preparation">In Preparation</span>
                         </div>
                     </div>
                 </article>
 
                 <article class="publication-card fade-in">
-                    <div class="publication-figure">Submitted</div>
+                    <div class="publication-figure">In Prep</div>
                     <div>
-                        <h3 class="publication-title">Explainable 3D Multi-scale Assessment of Parkinson’s Disease Progression: Toward a Quantitative Movement Report Across the Mobility Spectrum</h3>
-                        <p class="publication-authors">Kim K, Lyu S, Lim L, Wen Y, <strong>Shi Y</strong>, et al.</p>
-                        <p class="publication-description">
-                            Submitted manuscript on explainable multi-scale modeling for quantitative assessment of Parkinson’s disease progression.
-                        </p>
+                        <h3 class="publication-title">DANNCE-step: a pipeline for precise, automated quantification of motor dysfunction in rodent models of stroke</h3>
+                        <p class="publication-authors"><strong>Shi Y*</strong>, Lyu S*, et al.</p>
                         <div class="publication-meta">
-                            <span class="publication-venue">Submitted</span>
-                            <span class="publication-status in-preparation">Submitted</span>
+                            <span class="publication-status in-preparation">In Preparation</span>
                         </div>
                     </div>
                 </article>
